@@ -57,6 +57,3 @@ VideoJuego/
     *   `vidasActuales`: Persistencia de vidas entre niveles.
 *   **Estado en Memoria (Tiempo de Ejecución)**:
     *   Clases `GameScene`, `Jugador` gestionan el estado activo (posición, score, enemigos) dentro del ciclo de vida de Phaser.
-
-## Autor
-**Alan Gael Gallardo Jimenez**
