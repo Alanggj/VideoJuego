@@ -1,0 +1,612 @@
+:root{
+    --btnJugar: linear-gradient(135deg, #f82371, #fc25a2);
+    --btnTutorial: linear-gradient(135deg, #673cdb, #945ded);
+    --btnPuntuaciones: linear-gradient(135deg, #f09819, #edde5d);
+    --btnAjustes: linear-gradient(135deg, #ff1c68, #cc3e51);
+    --btnCreditos: linear-gradient(135deg, #00c6ff, #0072ff);
+    --btnRegresar: linear-gradient(135deg, #495bf8, #52d7ff);
+    --btnRegresarT: linear-gradient(135deg, #495bf8, #52d7ff);
+    --btnPlay: linear-gradient(135deg, #f82371, #fc25a2);
+    
+}
+
+
+body {
+    background-color: #f0f0f0;
+    /* Color de fondo opcional */
+    height: 100vh;
+    font-family: 'Aclonica', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+input{
+    font-family: inherit;
+}
+
+input::placeholder{
+    font-family: 'Aclonica', sans-serif;
+
+}
+
+h2.text-center {
+    font-family: 'Aclonica', sans-serif; /* O la fuente que prefieras */
+    font-size: 3rem; /* Ajusta el tamaño si es necesario */
+    font-weight: bold; /* Opcional: Cambia el grosor */
+    text-align: center; /* Alinea el texto al centro */
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.3); /* Sombra del texto */
+    color: white /* Cambia el color si lo deseas */
+}
+
+
+.aclonica-regular {
+    font-family: "Aclonica", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+a{
+    text-decoration: none;
+}
+
+.contenedor,
+.contenedorEscojer,
+.contenedorC,
+.contenedorA,
+.contenedorT,
+.contenedorP {
+    display: flex;
+    margin-top: -40px;
+    flex-direction: column;
+    /* Organiza los botones en columnas */
+    align-items: flex-start;
+    /* Alinea los botones a la izquierda */
+    gap: 20px;
+    /* Espacio entre los botones */
+    width: 90vw;
+    /* Ancho del contenedor */
+    height: 90vh;
+    /* Altura del contenedor */
+
+    background-size: cover;
+    /* Hace que la imagen cubra todo el contenedor */
+    background-position: center;
+    /* Centra la imagen */
+    background-repeat: no-repeat;
+    /* Evita que la imagen se repita */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    /* Espacio interno del contenedor */
+}
+
+.contenedor {
+    background-image: url('../assets/background/menu.jpg');
+}
+
+.contenedorEscojer {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: flex-end; /* Alinea el contenido hacia la parte inferior */
+    height: 100vh; /* Altura de la ventana completa */
+    position: relative; /* Asegura que el contenedor tenga el 100% de la altura */
+    background-image: url('../assets/background/kusuri.jpg');
+
+}
+
+.contenedorC {
+    display: grid;
+    
+    /* La primera fila se adapta al contenido.
+    La segunda fila ocupa todo el espacio restante.
+    La tercera fila se adapta al contenido. */
+
+    grid-template-rows: auto 1fr auto;
+    gap: 20px;
+    width: 90%;
+    text-align: center;
+    justify-content: center;
+    align-items: flex-end; 
+    height: 100vh; 
+    position: relative;
+    background-image: url(../assets/background/ShizukaBackground.jpg);
+}
+
+.info-container{
+    display: grid;
+    margin-bottom: 4rem;
+    grid-template-columns: 1fr 1fr 1fr; /* 3 columnas */
+    gap: 10px;
+}
+.integrantes, .materia, .fecha {
+    padding: 20px;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo img{
+    width: 400px;
+}
+
+.contenedorA {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: flex-end; /* Alinea el contenido hacia la parte inferior */
+    height: 100vh; /* Altura de la ventana completa */
+    position: relative; /* Asegura que el contenedor tenga el 100% de la altura */
+    background-image: url(../assets/background/kusuri.jpg);
+}
+
+.contenedorT {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: flex-end; /* Alinea el contenido hacia la parte inferior */
+    height: 100vh; /* Altura de la ventana completa */
+    position: relative; /* Asegura que el contenedor tenga el 100% de la altura */
+    background-image: url(../assets/background/NanoBackground.jpg);
+}
+
+.contenedorP {
+    display: flex;
+    justify-content: center; 
+    align-items: flex-end;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    background-image: url(../assets/background/karane.jpg);
+}
+
+.ajuste{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    /* Espacio interno del contenedor */
+}
+.titulo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    margin-right: 3.5rem;
+
+}
+
+.titulo img {
+    width: 300px;
+    align-items: center;
+    height: 150px;
+    margin-left: 10rem;
+}
+
+.titulo p {
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+    margin-top: 1rem;
+    margin-left: 10rem;
+}
+
+.botones {
+    display: flex;
+    flex-direction: column;
+    /* Organiza los botones en columnas */
+    justify-content: center;
+    margin-top: 1rem;
+
+    margin-left: 10rem;
+    gap: 20px;
+    /* Espacio entre los botones */
+    padding: 20px;
+    /* Espacio interno del contenedor */
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 20px;
+    /* Espaciado interno del botón */
+    color: white;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    height: 50px;
+    /* Ajusta la altura según sea necesario */
+    width: 300px;
+    /* Ajusta el ancho según sea necesario */
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 17px;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.divRegresar {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    position: absolute;
+    /* margin-top: 40px; */
+    bottom: 2%; /* Ajusta la distancia desde el fondo de la pantalla */
+}
+
+.buttonContainer {
+    display: flex;
+    flex-direction: column; /* Apila los botones verticalmente */
+    align-items: center; /* Centra los botones horizontalmente */
+}
+
+.ContenedorA{
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    position: absolute; /* Ajusta la distancia desde el fondo de la pantalla */
+}
+
+.ContenedorA h2{
+    font-size: 60px;
+    font-weight: 600;
+    color: white;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.7);
+    text-transform: uppercase;
+    margin-top: 1rem;
+}
+
+.contenedorA label{
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.7);
+    text-transform: uppercase;
+    margin-top: 1rem;
+}
+
+
+.ajusteContainer{
+    display: flex;
+    flex-direction: column; /* Apila los botones verticalmente */
+    align-items: center; /* Centra los botones horizontalmente */
+}
+
+
+.btnRegresar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+    padding: 10px 20px; /* Espaciado interno del botón */
+    color: white;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    height: 50px; /* Ajusta la altura del botón */
+    width: 300px; /* Ajusta el ancho del botón */
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 17px;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.bP{
+    translate : -30%;
+}
+
+.btnJugar {
+    background: var(--btnJugar)
+
+}
+
+.btnTutorial {
+    background: var(--btnTutorial);
+}
+
+.btnPuntuaciones {
+    background: var(--btnPuntuaciones);
+}
+
+.btnAjustes {
+    background: var(--btnAjustes);
+}
+
+.btnCreditos {
+    background: var(--btnCreditos);
+}
+
+.btnRegresar {
+    background: var(--btnRegresar);
+}
+
+.btnRegresarT {
+    background: var(--btnRegresarT);
+}
+
+#playButton{
+    background: var(--btnJugar);
+}
+
+#playButton:active {
+    transform: scale(0.9);
+    transition: all 50ms ease;
+}
+
+button:active {
+    transform: scale(0.9);
+    transition: all 50ms ease;
+}
+
+.icon {
+    width: 25px;
+    height: 36px;
+    transition: all 0.5s ease;
+    z-index: 2;
+}
+
+.play {
+    transition: all 0.5s ease;
+    transition-delay: 200ms;
+}
+
+button:hover .icon {
+    transform: scale(3) translate(40%);
+}
+
+
+button:hover .play {
+    transform: translateX(100%);
+    transition-delay: 300ms;
+}
+
+.btnTutorial:hover .play {
+    transform: translateX(70%);
+}
+
+.btnTutorial:hover .icon {
+    transform: scale(3) translate(60%);
+
+}
+
+.btnPuntuaciones:hover .play {
+    transform: translateX(30%);
+}
+
+.btnAjustes:hover .play {
+    transform: translateX(60%);
+}
+
+.btnCreditos:hover .play {
+    transform: translateX(60%);
+}
+
+.btnRegresar:hover .play {
+    transform: translateX(60%);
+}
+
+a {
+    text-decoration: none;
+}
+
+canvas {
+    display: none;
+}
+
+.divRegresar a {
+    text-decoration: none; 
+    
+}
+
+#playButton{
+    flex-direction: column;
+}
+
+
+/* TITULOS DE CADA PANTALLA */
+.tituloSeccion{
+    display: flex;
+    position: absolute;
+    top: 0;
+    margin-top: 4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+    /* display: inline-block; */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+.tutorial{
+    background: linear-gradient(135deg, #7619f0, #b35ded);
+    width: 80%;
+    font-size: 30px;
+
+}
+.puntuaciones{
+    background: linear-gradient(135deg, #f09819, #edde5d);
+    width: 80%;
+    
+}
+.ajustes{
+    background: linear-gradient(135deg, #ff1c68, #cc3e51);
+    width: 80%;
+}
+.creditos{
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    width: 80%;
+
+}
+
+
+/* TUTORIAL */
+.tutorial-container {
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.slide {
+    display: none;
+    padding: 20px;
+    
+}
+
+.slide h2{
+    font-size: 30px;
+    text-align: center;
+}
+
+.slide p{
+    font-size: 15px;
+    text-align: center;
+}
+
+.slide.active {
+    display: block;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#prev,#next{
+    background: linear-gradient(135deg, #7619f0, #b35ded);
+    
+}
+
+.personajes,.imagenes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Espacio entre personajes */
+}
+
+.personaje {
+    text-align: center;
+}
+
+.personaje-img {
+    width: 80px;   
+    height: auto;
+    border-radius: 10px;
+}
+
+.nivel1-img{
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.rompecabezas-img{
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.x-img, .z-img{
+    width: 75px;
+    height: auto;
+}
+
+.diosMalo{
+    width: 100px;
+}
+
+.ataqueDios{
+    width: 120px;
+}
+
+.nano{
+    width: 50px;
+}
+.hahari{
+    width: 150px;
+}
+
+.rentaro{
+    width: 80px;
+}
+
+.rentaroCaballo{
+    width: 100px;
+}
+
+.ataque{
+    width: 90px;
+}
+.flechas{
+    width: 120px;
+}
+.vidas{
+    width: 300px;
+}
+.input-img{
+    width: 500px;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+
+@media screen and (min-width: 768px) {
+    .contenedor {
+       display: flex;
+       gap: 20px;
+    }
+
+    .titulo img {
+        width: 200px;
+        height: auto;
+        align-items: center;
+        margin-left: 12rem;
+    }
+
+    .titulo p {
+        font-size: 30px;
+        margin-top: 1rem;
+        margin-left: 12rem;
+        margin-bottom: -1rem;
+    }
+
+    .botones{
+        display: flex;
+        justify-content: center;
+        gap: -20px;
+    }
+    button{
+        flex: 1 1 100%x;
+        max-width: 250px;
+        max-height: 200px;
+    }
+}

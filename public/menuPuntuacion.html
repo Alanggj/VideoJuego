@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/estilos.css">
+    <script src="//cdn.jsdelivr.net/npm/phaser@3.11.0/dist/phaser.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<title>Puntuación (100 Novias)</title>
+</head>
+
+<body>
+    <div class="contenedorP">
+        <!-- <h2 class="tituloSeccion">Puntuaciones</h2> -->
+        
+        <div class="container md-5">
+        <h2 class="text-center tituloSeccion puntuaciones">Puntuaciones</h2>
+
+            <table class="table table-striped mt-4">
+                <thead class="table-warning">
+                    <tr>
+                        <th>#</th>
+                        <th>Nombre</th>
+                        <th>Puntos</th>
+                        <th>Fecha</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaPuntos">
+                    <!-- Aquí se insertarán los datos dinámicamente -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="divRegresar">
+            <a href="index.html" style="text-decoration: none;">
+                <button class="btnRegresar bP">
+                    <img src="assets/background/3.png" alt="icono" class="icon" />
+                    <span class="play">Regresar</span>
+                </button>
+            </a>
+        </div>
+
+    </div>
+
+    <script src="script/musica.js"></script>
+    <script src="script/tablaPuntos.js"></script>
+    <script src="script/ajustes.js"></script>
+
+
+
+</body>
+
+</html>

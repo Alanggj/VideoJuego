@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    background: url(../assets/background/Shizuka.png) no-repeat center center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.656); /* Capa de oscurecimiento */
+    background-blend-mode: multiply; /* Mezcla el color con la imagen */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    position: relative; /* Asegúrate de que el contenedor tenga posición relativa */
+}
+
+canvas {
+    transform: scale(0.80);
+    transform-origin: center;
+}
+
+.blur {
+    filter: blur(5px); /* Ajusta el valor para el nivel de desenfoque que desees */
+    transition: filter 0.3s ease; /* Transición suave para el desenfoque */
+}
+
+.round-button {
+    background: linear-gradient(135deg, #f82371, #fc25a2); /* Color de fondo */
+    border: none;
+    border-radius: 50%; /* Hace que el botón sea redondo */
+    width: 45px; /* Ancho del botón */
+    height: 45px; /* Alto del botón */
+    display: flex; /* Usar flexbox para centrar el SVG */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+    cursor: pointer; /* Cambiar el cursor al pasar el ratón */
+    transition: background-color 0.3s; /* Transición suave para el color de fondo */
+    position: absolute; /* Posicionamiento absoluto */
+    top: 60px; /* Distancia desde la parte superior */
+    right: 160px; /* Distancia desde la derecha */
+    z-index: 100; /* Para que se vaya hacia adelante */
+}
+
+.round-button:hover {
+    background-color: #1a7898; /* Color de fondo al pasar el ratón */
+}
+
+.round-button svg {
+    fill: white; /* Color del SVG */
+}
+
+#resumeButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centrar el botón */
+    display: none; /* Inicialmente no visible */
+}
+
+.buttonContainer {
+    display: flex;
+    flex-direction: column; /* Asegura que los botones se apilen verticalmente */
+    align-items: center; /* Centra los botones horizontalmente */
+    margin-top: 50px;
+}
+
+#restartButton, #menuButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px; /* Espaciado interno del botón */
+    color: white;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    height: 40px; /* Ajusta la altura según sea necesario */
+    width: 200px; /* Ajusta el ancho según sea necesario */
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 15px; /* Reduce el tamaño de la fuente */
+    border-radius: 25px; /* Ajusta el radio del borde */
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    margin: 5px 0; /* Margen vertical entre los botones */
+}
+
+#restartButton {
+    background: linear-gradient(135deg, #f82371, #fc25a2); /* Color de fondo para Reiniciar */
+}
+
+#restartButton:active {
+    transform: scale(0.9);
+    transition: all 50ms ease;
+}
+
+#restartButton:hover {
+    background: linear-gradient(135deg, #fc25a2, #f82371); /* Cambia el color de fondo al pasar el mouse */
+}
+
+#menuButton {
+    background: linear-gradient(135deg, #7619f0, #b35ded); /* Color de fondo para Menú Principal */
+}
+
+#menuButton:active {
+    transform: scale(0.9);
+    transition: all 50ms ease;
+}
+
+#menuButton:hover {
+    background: linear-gradient(135deg, #b35ded, #7619f0); /* Cambia el color de fondo al pasar el mouse */
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="//cdn.jsdelivr.net/npm/phaser@3.11.0/dist/phaser.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aclonica&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"rel="stylesheet">
+    <link rel="stylesheet" href="styles/a.css">
+
+    <title>Juego</title>
+</head>
+
+<body>
+    <div id="game-container">
+        <div id="pauseButton" class="round-button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="40" height="40">
+                <path d="M9 4h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h2a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2z"></path>
+                <path d="M17 4h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h2a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2z"></path>
+            </svg>
+        </div>
+        <div id="resumeButton" class="round-button" style="display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="40" height="40">
+                <path d="M10 6v12l8-6z"></path> <!-- Flecha hacia la derecha -->
+            </svg>
+        </div>
+        <div id="muteButton" class="round-button" style="position: absolute; bottom: 20px; right: 165px; z-index: 10; top: 550px;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="40" height="40" stroke-width="2">
+                <path d="M6 15h-2a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h2l3.5 -4.5a.8 .8 0 0 1 1.5 .5v14a.8 .8 0 0 1 -1.5 .5l-3.5 -4.5"></path>
+                <path d="M16 10l4 4m0 -4l-4 4"></path>
+            </svg>
+        </div>
+    </div>
+    <!-- Canvas para Game Over -->
+    <canvas id="gameOverCanvas" style="display: none; position: absolute; top: 0; left: 0; z-index: 10;"></canvas>
+
+    <!-- Contenedor de botones -->
+    <div class="buttonContainer" id="gameOverButtons"style="display: none; position: absolute; top: 60%; left: 50%; transform: translate(-50%, -50%); z-index: 20;">
+        <button id="restartButton" class="btnJugar" style="display: none;">
+            Reiniciar
+        </button>
+        <button id="menuButton" class="btnJugar" style="display: none;">
+            Menú Principal
+        </button>
+    </div>
+
+    <script src="script/jugador.js"></script>
+    <script src="script/gameScene.js"></script>
+    <script src="script/ajustes.js"></script>
+
+
+
+    <script type="text/javascript">
+        var config = {
+            type: Phaser.AUTO,
+            width: 1500,
+            height: 800,
+            parent: 'game-container',
+            physics: {
+                default: 'arcade',
+                arcade: {
+                    gravity: { y: 300 },
+                    debug: false
+                }
+            },
+            audio: {
+                disableWebAudio: false
+            },
+            plugins: {
+                scene: [
+                    {
+                        key: 'DOMElementPlugin',
+                        plugin: Phaser.DOMElement,
+                        mapping: 'dom'
+                    }
+                ]
+            },
+
+            scene: [GameScene] // Solo mantiene la escena principal del juego
+        };
+
+        var game = new Phaser.Game(config);
+    </script>
+
+    
+</body>
+
+</html>
